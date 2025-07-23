@@ -1,0 +1,6 @@
+numpy==1.24.3
+torch==2.0.1
+tensorboard==2.13.0
+yaml==0.2.5
+matplotlib==3.7.1
+pytest==7.3.1

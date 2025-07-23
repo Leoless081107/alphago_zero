@@ -1,0 +1,40 @@
+# Root level configuration
+board_size: 19
+komi: 7.5
+
+# MCTS configuration
+mcts:
+  num_simulations: 800
+  c_puct: 1.5
+  temperature: 1.0
+  temperature_threshold: 5
+
+# Network configuration
+network:
+  num_res_blocks: 20  # Reduced from 10
+  num_channels: 256  # Reduced from 128
+  learning_rate: 0.001
+  weight_decay: 1e-4
+  batch_size: 2048
+
+# Training configuration
+training:
+  iterations: 49000
+  num_games_per_iteration: 1
+  num_epochs: 5 # Add this line
+  batch_size: 2048
+  replay_buffer_size: 1000000
+  learning_rate: 0.001
+  weight_decay: 1e-4
+  checkpoint_interval: 10
+
+# Self-play configuration
+self_play:
+  num_workers: 16
+  max_game_length: 450
+
+# Path configuration
+paths:
+  model_save_path: data/trained_models
+  experience_buffer_path: data/experience
+  log_path: data/logs
