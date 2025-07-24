@@ -19,7 +19,7 @@ network:
 
 # Training configuration
 training:
-  iterations: 49000
+  iterations: 100
   num_games_per_iteration: 1
   num_epochs: 5 # Add this line
   batch_size: 2048
